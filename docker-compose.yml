@@ -1,0 +1,9 @@
+version: '3'
+services:
+  tftp:
+    image: ciscoliveru/tftpd:latest
+    restart: always
+    volumes:
+      - /var/tftpboot:/var/tftpboot
+    ports:
+      - 69:69/udp
